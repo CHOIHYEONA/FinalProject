@@ -7,9 +7,9 @@ create table customers (
 )
 create table board (
 	boardUid number primary key,
-	title varchar2(40) ,
+	b_title varchar2(40) ,
 	b_date date ,
-	content clob,
+	b_content clob,
 	b_count number,
 	b_like number,
 	userUid number,
@@ -20,7 +20,7 @@ create table board (
 create table comm (
 	boardUid number primary key,
 	c_date date not null,
-	content varchar2(100),
+	c_content varchar2(100),
 	userUid number,
 	
 	constraint fk_customer_comm foreign key(userUid)
@@ -28,7 +28,7 @@ create table comm (
 )
 create table gallery (
 	galleryUid number primary key,
-	title varchar2(40) not null,
+	g_title varchar2(40) not null,
 	g_date date,
 	imgName varchar2(50) not null,
 	g_count number,
